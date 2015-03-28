@@ -41,5 +41,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Guard::Minitest allows to automatically & intelligently launch tests with the minitest framework
+  gem 'guard'
+  gem 'guard-minitest'
+end
+
+group :test do
+  # rails automatically generates a performance tst stub in the test/performance directory which can trigger dependency error with RoR's lazy load
+  gem 'ruby-prof'
 end
 
